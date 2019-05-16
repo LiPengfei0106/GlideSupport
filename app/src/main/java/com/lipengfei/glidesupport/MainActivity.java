@@ -16,9 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView rv_list;
     static String[] imgs = {
-            "https://b-ssl.duitang.com/uploads/item/201711/05/20171105001828_e8tPd.thumb.224_0.gif",
-            "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3207781657,3460758070&fm=26&gp=0.jpg",
-            "http://osscdn.ixingtu.com/musi_file/20181109/d6325e7f740f0604e9c2928267076352.webp"};
+            "https://raw.githubusercontent.com/LiPengfei0106/GlideSupport/master/imgs/gif.gif",
+            "https://raw.githubusercontent.com/LiPengfei0106/GlideSupport/master/imgs/svg.svg",
+            "https://raw.githubusercontent.com/LiPengfei0106/GlideSupport/master/imgs/webp.webp"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onBindViewHolder(@NonNull MyHolder myHolder, int i) {
                 myHolder.tv_info.setText("Item:" + i);
-                Glide.with(MainActivity.this).load(imgs[i % 3]).into(myHolder.iv_img);
+                Glide.with(MainActivity.this).load(imgs[i % imgs.length]).into(myHolder.iv_img);
             }
 
             @Override
